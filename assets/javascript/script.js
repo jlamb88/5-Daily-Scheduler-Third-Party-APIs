@@ -1,7 +1,7 @@
 var now = moment();
 $('#currentDay').text(now.format("dddd MMM Do, YYYY"));
-// var currentHour = now.format("H");
-currentHour = 15
+var currentHour = now.format("H");
+
 
 for (n=7;n<18;n++)
 { 
@@ -15,15 +15,21 @@ for (n=7;n<18;n++)
   else {
     hourTime = n+'pm';
     }
+
   var schedRow = '<section class="row" id ="schedule-row"></section>';
   containerEl.append(schedRow);
   currentRow = $("section").last()
   currentRow.append('<section class="col-1 hour" id="hour">'+hourTime+'</section>')
   apptText = localStorage.getItem(hourTime);
   currentRow.append('<textarea id="appt" data-time="'+hourTime+'"></textarea>')
-  $("#appt").last().text = apptText
-  currentRow.append('<button type="button" class="saveBtn col-1">save</button>')
-  $("button", currentRow).attr("click", "saveAppt()")
+  $("#appt", currentRow).text(apptText)
+  currentRow.append('<button type="button" class="saveBtn col-1" id="'+hourTime+'">save</button>')
+  $("button", currentRow).click(function () {
+    var apptTime = $(this).attr("id")
+    console.log(apptTime);
+    var apptText = $(this).siblings("#appt").val();
+    console.log(apptText);
+    localStorage.setItem(apptTime, apptText);})
     
   currentAppt = $("textarea").last()
   if (n<currentHour) {
@@ -35,19 +41,4 @@ for (n=7;n<18;n++)
   else {
     currentAppt.attr("class", "col-10 present")
   }
-  }
-    
-  function saveAppt() {
-    var apptTime = $(this).prev().data("time")
-    console.log(apptTime);
-    var apptText = $(this).prev().text;
-    console.log(apptText);
-    localStorage.setItem(apptTime, apptText);}
-  // $("button").click((event) => {
-  //   var apptTime = event.target.siblings();
-
-  //   console.log(apptTime);
-  //   var apptText = $(this).prev().val;
-  //   console.log(apptText);
-  //   localStorage.setItem(apptTime, apptText);}
-  // )
+}
