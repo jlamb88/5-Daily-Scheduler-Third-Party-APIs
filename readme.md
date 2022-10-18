@@ -28,7 +28,7 @@ THEN the saved events persist<br>
 
 ## Installation
 
-GitHub:
+GitHub: https://github.com/jlamb88/5-Daily-Scheduler-Third-Party-APIs.git
 
 URL:
 
