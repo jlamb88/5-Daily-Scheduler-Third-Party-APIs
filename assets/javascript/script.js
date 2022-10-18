@@ -1,7 +1,7 @@
-var now = moment();
-$('#currentDay').text(now.format("dddd MMM Do, YYYY"));
-var currentHour = now.format("H");
-
+// var now = moment();
+// $('#currentDay').text(now.format("dddd MMM Do, YYYY"));
+// var currentHour = now.format("H");
+currentHour = 11;
 
 for (n=7;n<18;n++)
 { 
