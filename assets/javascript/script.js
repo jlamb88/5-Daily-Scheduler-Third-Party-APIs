@@ -20,25 +20,25 @@ for (n=7;n<18;n++)
   containerEl.append(schedRow);
   currentRow = $("section").last()
   currentRow.append('<section class="col-1 hour" id="hour">'+hourTime+'</section>')
-  apptText = localStorage.getItem(hourTime);
+ 
   currentRow.append('<textarea id="appt" data-time="'+hourTime+'"></textarea>')
+  apptText = localStorage.getItem(hourTime);
   $("#appt", currentRow).text(apptText)
+  
   currentRow.append('<button type="button" class="saveBtn col-1" id="'+hourTime+'">save</button>')
   $("button", currentRow).click(function () {
     var apptTime = $(this).attr("id")
-    console.log(apptTime);
     var apptText = $(this).siblings("#appt").val();
-    console.log(apptText);
     localStorage.setItem(apptTime, apptText);})
     
   currentAppt = $("textarea").last()
   if (n<currentHour) {
-    currentAppt.attr("class", "col-10 past")
+    currentAppt.attr("class", "col-10 past description")
   }
   else if (n>currentHour) {
-    currentAppt.attr("class", "col-10 future")
+    currentAppt.attr("class", "col-10 future description")
   }
   else {
-    currentAppt.attr("class", "col-10 present")
+    currentAppt.attr("class", "col-10 present description")
   }
 }

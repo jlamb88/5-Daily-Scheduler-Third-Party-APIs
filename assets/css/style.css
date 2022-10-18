@@ -4,8 +4,11 @@
     margin: 0;
 }
 
+html {
+  font-size: 100%;
+}
 .header {
-    padding: 20px;
+    padding: 2em;
     font-family: Arial, Helvetica, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
     background-color: #2a607c;
     color: #ffffff;
@@ -17,16 +20,7 @@ a {
 }
 
 p {
-    font-size: 16px;
-}
-
-.splash {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
+    font-size: 1rem;
 }
 
 .float-left {
@@ -38,9 +32,10 @@ p {
     float: right;
     margin-left: 25px;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1;
   }
   
@@ -50,7 +45,7 @@ body {
     border: none;
     resize: none;
     border-left: 1px solid black;
-    padding: 10px;
+    padding: 1em;
   }
   
   .jumbotron {
@@ -59,6 +54,7 @@ body {
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
+    
   }
   
   .description {
@@ -67,7 +63,7 @@ body {
   
   .time-block {
     text-align: center;
-    border-radius: 15px;
+    border-radius: 1.5em;
   }
   
   .row {
@@ -80,6 +76,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    padding-top: 1em;
   }
   
   .past {
@@ -99,19 +96,19 @@ body {
   
   .saveBtn {
     border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
     background-color: #06aed5;
     color: white;
   }
   
   .saveBtn i:hover {
-    font-size: 20px;
+    font-size: 2rem;
     transition: all 0.3s ease-in-out;
   }
   
 .footer {
-    padding: 30px;
+    padding: 3em;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
