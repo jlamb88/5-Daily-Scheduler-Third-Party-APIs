@@ -2,7 +2,6 @@ var now = moment();
 $('#currentDay').text(now.format("dddd MMM Do, YYYY"));
 var currentHour = now.format("H");
 
-
 for (n=7;n<18;n++)
 { 
   var containerEl = $("#schedule");
